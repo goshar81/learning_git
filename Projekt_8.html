@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="csrf-token" content="5gd4epLoJSc3vrZ5hQkm2ZOObqED6Ki4LgpxYV14" />
+
+        <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?beb20">
+        <link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?b6f2f">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?7a376">
+
+        <link rel="canonical" href="https://kodilla.com/pl/project/54351" />
+        <title>    Projekt: Przystosowanie istniejącej strony do konwencji RWD
+</title>
+                
+        <link href="https://kodilla.com/static/css/libs/bootstrap.min.css?f13ad" rel="stylesheet">
+        <link href="https://kodilla.com/static/css/libs/font-awesome.min.css?6585d" rel="stylesheet">
+        <link href="https://kodilla.com/static/css/main.css?3448e" rel="stylesheet" type="text/css">
+                    <link rel="stylesheet" href="https://kodilla.com/static/css/libs/ui.resizable.css?1593c">
+        <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?cdfda" />
+        <link rel="stylesheet" href="https://kodilla.com/static/css/editor.css?33fd3">
+        <link href="https://kodilla.com/static/css/tools.css?8186e" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.0/css/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://kodilla.com/static/css/project.css?d3623">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-treeview/1.2.0/bootstrap-treeview.min.css">
+        <script>
+            window.environment = 'production';
+            window.loggedIn = true;
+                        window.fbAppId = 1449248938627896;
+            window.locale = 'pl';
+            window.lang = 'pl';
+        </script>
+        <!-- Facebook Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '696781457129903', {
+            em: 'insert_email_variable,'
+        });
+        fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=696781457129903&ev=PageView&noscript=1"/>
+        </noscript>
+        <!-- DO NOT MODIFY -->
+        <!-- End Facebook Pixel Code -->
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+        <!-- End Google Tag Manager -->
+</head>
+<body >
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+        appId: window.fbAppId,
+        xfbml: true,
+        version: 'v2.10'
+    });
+};
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <nav class="navbar-editor navbar navbar-dark bg-inverse clearfix">
+        <a href="/" class="logo"><img src="https://kodilla.com/static/img/kodilla-logo-sm-white.png?f6250"></a>
+    <div class="project-buttons">
+                        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Zadanie</a>
+            <div class="dropdown-menu">
+                                <a href="https://kodilla.com/pl/bootcamp-task/73/92726" target="_blank" class="dropdown-item">Przystosowanie istniejącej strony do konwencji RWD</a>
+                            </div>
+        </div>
+                <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Publikacja</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item" data-action="share">Udostępnij</a>
+            </div>
+        </div>
+                                <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Edycja</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item" data-action="reloadPreview">Odśwież podgląd (Ctrl+R)</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Plik</a>
+            <div class="dropdown-menu">
+                <a href="#" class="dropdown-item" data-action="newFile">Nowy plik</a>
+                <a href="#" class="dropdown-item" data-action="saveFile">Zapisz (Ctrl+S)</a>
+                <a href="#" class="dropdown-item" data-action="saveAllFiles">Zapisz wszystkie (Ctrl+Shift+S)</a>
+                <a href="https://kodilla.com/pl/project/54351.zip" class="dropdown-item">Pobierz jako zip</a>
+            </div>
+        </div>
+                    </div>
+    <div class="navbar-right nav navbar-nav">
+            <a href="https://kodilla.com/pl/knowledge-base" title="Baza wiedzy" target="__blank"><i class="fa fa-book fa-lg" aria-hidden="true"></i></a>
+        <a href="#" data-action="sendToMentor" title="tip_project.send_to_check"><i class="fa fa-check-square"></i> Wyślij do sprawdzenia</a>
+            <a href="#" title="Status Twojego projektu" class="project-status-container">Status: <span class="project-status project-in-review">review</b></a>
+            <div class="dropdown">
+            <a href="https://kodilla.com/pl/tools" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-color-picker">Color picker</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-border-radius">Border-radius</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-box-shadow">Box-shadow</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-text-shadow">Text-shadow</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-transition">Transition</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-flexbox">Flexbox</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <main class="editor" id="project-editor" data-project-id="54351" data-is-owner="1"></main>
+<div id="tools" class="editor-modal">
+    <div class="modal fade" id="tool-color-picker">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-color-picker">
+    <div class="card-header">
+        <h4 class="card-title">
+            Color picker
+        </h4>
+    </div>
+    <div class="card-block">
+        <div id="color" data-container="#color" data-color="#ff0000" data-inline="true"></div>
+        <form>
+            <fieldset class="form-group">
+                <label for="color-picker">Kod CSS</label>
+                <textarea class="form-control result-code" id="color-picker-code" rows="1">#ff0000</textarea>
+            </fieldset>
+        </form>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-border-radius">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-border-radius">
+    <div class="card-header">
+        <h4 class="card-title">
+            Border radius
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="border-radius-top-left">
+                            Top Left
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-top-left" name="topLeft" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="border-radius-top-right">
+                            Top Right
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-top-right" name="topRight" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="border-radius-bottom-right">
+                            Bottom Right
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-bottom-right" name="bottomRight" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="border-radius-bottom-left">
+                            Bottom Left
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-bottom-left" name="bottomLeft" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="box-shadow-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="box-shadow-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-box-shadow">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-box-shadow">
+    <div class="card-header">
+        <h4 class="card-title">
+            Box shadow
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="inset">
+                            Inset
+                        </label>
+                        <select class="form-control" id="inset" name="inset">
+                            <option value="">No</option>
+                            <option value="inset ">Inset</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="horizontal-length">
+                            Horizontal length
+                        </label>
+                        <input type="text" class="form-control" id="horizontal-length" name="horizontalLength" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="vertical-length">
+                            Vertical length
+                        </label>
+                        <input type="text" class="form-control" id="vertical-length" name="verticalLength" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="blur-radius">
+                            Blur radius
+                        </label>
+                        <input type="text" class="form-control" id="blur-radius" name="blurRadius" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="spread">
+                            Spread
+                        </label>
+                        <input type="text" class="form-control" id="spread" name="spread" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="box-shadow-color">
+                            Color
+                        </label>
+                        <input type="text" class="form-control" id="box-shadow-color" name="color" placeholder="e.g. #FF0000 or rgba(255, 0, 0, 1)"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="box-shadow-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="box-shadow-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-text-shadow">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-text-shadow">
+    <div class="card-header">
+        <h4 class="card-title">
+            Text shadow
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-horizontal-length">
+                            Horizontal length
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-horizontal-length" name="horizontalLength" placeholder="e.g. 2px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-vertical-length">
+                            Vertical length
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-vertical-length" name="verticalLength" placeholder="e.g. 2px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-blur-radius">
+                            Blur radius
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-blur-radius" name="blurRadius" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-color">
+                            Shadow color
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-color" name="color" placeholder="e.g. #FF0000 or rgba(255, 0, 0, 1)"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="text-shadow-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo unstyled">
+                    Lorem ipsum dolor sit amet dolor. Sed in augue a nunc. Quisque sed molestie tristique sodales. Vivamus vulputate aliquam convallis. Cras ut nulla nulla, at magna ac ligula turpis, et magnis dis parturient montes, nascetur ridiculus mus. Etiam dolor. Pellentesque varius justo. Sed eu tortor. Ut id lectus. Vivamus est.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-transition">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-transition">
+    <div class="card-header">
+        <h4 class="card-title">
+            Transition
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="transition-property">
+                            Property
+                        </label>
+                        <select class="form-control" id="transition-property" name="property">
+                            <option>all</option>
+                            <option>background</option>
+                            <option>color</option>
+                            <option>height</option>
+                            <option>width</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-duration">
+                            Duration
+                        </label>
+                        <input type="text" class="form-control" id="transition-duration" name="duration" placeholder="e.g. 200ms or 2s"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-function">
+                            Function
+                        </label>
+                        <select class="form-control" id="transition-function" name="function">
+                            <option>ease</option>
+                            <option>linear</option>
+                            <option>ease-in</option>
+                            <option>ease-out</option>
+                            <option>ease-in-out</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="transition-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo">
+                    Lorem ipsum dolor sit amet dolor. Sed in augue a nunc. Quisque sed molestie tristique sodales. Vivamus vulputate aliquam convallis.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-flexbox">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-flexbox">
+    <div class="card-header">
+        <h4 class="card-title">
+            Flexbox generator
+        </h4>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-info add-element">Dodaj element</button>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-grow">
+                            flex-grow
+                        </label>
+                        <input type="text" class="form-control" id="flexbox-flex-grow" name="flexGrow" placeholder="e.g. 1"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-shrink">
+                            flex-shrink
+                        </label>
+                        <input type="text" class="form-control" id="flexbox-flex-shrink" name="flexShrink" placeholder="e.g. 0"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-basis">
+                            flex-basis
+                        </label>
+                        <input type="text" class="form-control" id="flexbox-flex-basis" name="flexBasis" placeholder="e.g. auto, 100px or 20%"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-direction">
+                            flex-direction
+                        </label>
+                        <select class="form-control" id="flexbox-flex-direction" name="flexDirection">
+                            <option>row</option>
+                            <option>row-reverse</option>
+                            <option>column</option>
+                            <option>column-reverse</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-wrap">
+                            flex-wrap
+                        </label>
+                        <select class="form-control" id="flexbox-flex-wrap" name="flexWrap">
+                            <option>wrap</option>
+                            <option>wrap-reverse</option>
+                            <option>nowrap</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-justify-content">
+                            justify-content
+                        </label>
+                        <select class="form-control" id="flexbox-justify-content" name="justifyContent">
+                            <option>flex-start</option>
+                            <option>flex-end</option>
+                            <option>center</option>
+                            <option>space-between</option>
+                            <option>space-around</option>
+                        </select>
+                        <small class="text-muted">Aby zobaczyć zmianę ustaw trzy pierwsze wartości np. na 0 1 auto</small>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="transition-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h4>Podgląd:</h4>
+                <div class="flex-container demo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+</div>
+<script type="text/x-handlebars-template" data-template-name="boxShadowCode">
+-webkit-box-shadow: {{inset}}{{horizontalLength}} {{verticalLength}} {{blurRadius}} {{spreadLength}} {{color}};
+box-shadow: {{inset}}{{horizontalLength}} {{verticalLength}} {{blurRadius}} {{spread}} {{color}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="boxShadowStyle">
+.card.tool-box-shadow .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="textShadowCode">
+text-shadow: {{horizontalLength}} {{verticalLength}} {{blurRadius}} {{color}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="textShadowStyle">
+.card.tool-text-shadow .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="flexboxCode">
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: {{flexDirection}} {{flexWrap}};
+    flex-flow: {{flexDirection}} {{flexWrap}};
+    -webkit-justify-content: {{justifyContent}};
+    justify-content: {{justifyContent}};
+}
+.flex-item {
+    -webkit-flex: {{flexGrow}} {{flexShrink}} {{flexBasis}};
+    flex: {{flexGrow}} {{flexShrink}} {{flexBasis}};
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="flexboxStyle">{{code}}</script>
+<script type="text/x-handlebars-template" data-template-name="borderRadiusCode">
+-webkit-border-radius: {{topLeft}} {{topRight}} {{bottomRight}} {{bottomLeft}};
+border-radius: {{topLeft}} {{topRight}} {{bottomRight}} {{bottomLeft}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="borderRadiusStyle">
+.card.tool-border-radius .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="transitionCode">
+-webkit-transition: {{property}} {{duration}} {{function}};
+-moz-transition: {{property}} {{duration}} {{function}};
+-ms-transition: {{property}} {{duration}} {{function}};
+-o-transition: {{property}} {{duration}} {{function}};
+transition: {{property}} {{duration}} {{function}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="transitionStyle">
+.card.tool-transition .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="colorPickerCode">
+{{color}}
+</script>
+<script type="text/x-handlebars-template" data-template-name="flexItem">
+<div class="flex-item"><span contenteditable="true">{{text}}</span></div>
+</script><script type="text/x-handlebars-template" data-template-name="previewTitle">
+    {{#if title }}
+    <b>{{label}}:</b> {{title}}
+    {{else}}
+    <b>{{label}}</b>
+    {{/if}}
+</script>
+<script type="text/x-handlebars-template" data-template-name="editor">
+        <div class="aside-toggle">
+        <i class="fa fa-chevron-left"></i>
+        <i class="fa fa-chevron-right"></i>
+    </div>
+    <aside class="open">
+        <header>
+            <h2>Przystosowanie istniejącej strony do konwencji RWD</h2>
+        </header>
+        <div class="aside-content">
+            <div class="csb-container tree-view"></div>
+        </div>
+        <div class="manual-container">
+            <a href="#" class="" data-action="show-manual-modal">Jak używać tego edytora <i class="fa fa-info-circle" aria-hidden="true"></i></a>
+        </div>
+    </aside>
+    <section class="splitter-container hidden-md-down">
+        {{#unless presentation_url }}
+        <div class="splitter vertical">
+            <div class="ide">
+                <div class="plug">
+                    <div>
+                        <i class="fa fa-file-code-o"></i>
+                        <p>Otw&oacute;rz istniejący plik lub stw&oacute;rz nowy aby rozpocząć edycję</p>
+                    </div>
+                </div>
+                <div class="tabs-container">
+                    <i data-action="show-preview" class="fa fa-eye fa-lg show-preview-btn display-none" title="Pokaż podgląd"></i>
+                    <div class="tabs"></div>
+                    <div class="arrows">
+                        <i class="fa fa-angle-left slide-left"></i>
+                        <i class="fa fa-angle-right slide-right"></i>
+                    </div>
+                </div>
+                <div id="editor"></div>
+            </div>
+            <div id="preview">
+                <header class="clearfix">
+                        <nav class="tools">
+        <a href="#" class="reload-preview" title="Odśwież stronę (Ctrl+R)"><i class="fa fa-refresh fa-lg"></i></a>
+    </nav>
+                    <h2 data-label="Podgląd"></h2>
+                    <nav class="clearfix">
+                        <i data-action="layout-change" class="fa fa-th-large fa-lg" title="Układ pionowy/poziomy"></i>
+                        <i data-action="expand-preview" class="fa fa-share-square-o fa-lg" title="Ustaw podgląd jako osobne okno"></i>
+                        <i data-action="compress-preview" class="fa fa-share-square-o fa-lg display-none" title="Ustaw podgląd jako element układu"></i>
+                        <i data-action="hide-preview" class="fa fa-eye fa-lg" title="Schowaj podgląd"></i>
+                        <i data-action="full-preview" class="fa fa-arrows-alt fa-lg" title="Maksymalizuj"></i>
+                        <i data-action="compact-preview" class="fa fa-arrows-alt fa-lg display-none" title="Minimalizuj"></i>
+                    </nav>
+                    <div class="select-wrapper">
+                        <select data-action="change-preview-file" id="preview-select"></select>
+                    </div>
+                </header>
+                <div id="window">
+                    <iframe src="about:blank"></iframe>
+                    <div id="validation-iframes"></div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <iframe id="presentation-iframe" src="{{ presentation_url }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        {{/unless}}
+            </section>
+    <div class="alert alert-info editor-plug resolution" role="alert">
+        Edytor nie działa na urządzeniach o rozdzielczości poprzecznej niższej niż 992 piksele.
+    </div>
+    <div class="alert alert-info editor-plug browser" role="alert">
+        <p>Twoja przeglądarka jest przestarzała. Lista najniższych obsługiwanych przez nas wersji:</p>
+        <ul>
+            <li>Chrome 30</li>
+            <li>Firefox 30</li>
+            <li>Opera 10</li>
+            <li>Safari 7</li>
+            <li>Internet Explorer 11</li>
+        </ul>
+    </div>
+</script>
+<script type="text/x-handlebars-template" data-template-name="editorTab">
+    {{filename}}
+    <i class="fa fa-times close-tab" title="Zamknij plik"></i>
+    <i class="fa fa-pencil edited" title="Niezapisany plik"></i>
+</script>
+
+    <div class="modal fade" id="save-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="file-row">
+                        <div>
+                            <input type="text" name="filename" class="form-control" placeholder="Nazwa pliku">
+                        </div>
+                    </div>
+                    <div class="tree-view"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-info btn-create-folder pull-left">Utw&oacute;rz folder</button>
+                    <button type="button" class="btn btn-reverse" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary btn-save">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="edit-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <fieldset class="form-group">
+                            <label>Nazwa projektu</label>
+                            <textarea type="text" class="form-control" name="name" placeholder="Nazwa projektu"></textarea>
+                        </fieldset>
+                        <fieldset class="form-group">
+                            <label>Opis projektu</label>
+                            <textarea type="text" class="form-control" name="description" placeholder="Opis projektu"></textarea>
+                        </fieldset>
+                        <button type="submit" style="display: none;"></button>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-reverse" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary btn-save">Zapisz</button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="modal fade" id="bootcamp-project-review-submit-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <div class="tasks-picker"  style="display: none;" >
+                            <h3>Które zadania z modułu <b>Struktura HTML i stylizacja CSS</b> są zawarte w tym kodzie?</h3>
+                                                        <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" value="92726"> Zadanie z: <b>Przystosowanie istniejącej strony do konwencji RWD</b>
+                                </label>
+                            </div>
+                                                    </div>
+                        <fieldset class="comment form-group">
+                            <label>Tw&oacute;j komentarz</label>
+                            <textarea class="form-control" name="comment" rows="5"></textarea>
+                            <small class="text-muted">To pole nie jest wymagane, ale jesli masz jakieś uwagi lub pytania, na kt&oacute;re chciałbyś uzyskać odpowiedź od mentora - możesz zadać je w tym miejscu.</small>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-reverse" data-dismiss="modal">Anuluj</button>
+                    <button type="button" class="btn btn-primary btn-save" data-status-name="review">Wyślij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="modal fade" id="share-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form>
+                        <fieldset class="form-group">
+                            <label>Tw&oacute;j link:</label>
+                            <input type="text" class="form-control" value="https://project-54351.kodilla.com/" />
+                            <small class="text-muted">Wyślij link do swojej strony (bez edytora kodu) do znajomych i pochwal się nią! Zapytaj ich o ocenę :)</small>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="manual-modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p><b>Do korzystania z tego edytora zalecamy używanie najnowszych wersji przeglądarek Chrome lub Firefox.</b></p>
+        <ol>
+            <li><b>Zapisywanie</b> - kod, który stworzyłeś nie jest automatycznie zapisywany, musisz wykonać tę czynność samodzielnie. Zapisujesz kod poprzez klawisze <b>Ctrl+S</b> lub menu <b>Plik/Zapisz</b> (dany aktywny plik). Jeśli chcesz zapisać zmiany we wszystkich otwartych plikach to skrót <b>Ctrl+Shift+S</b> lub menu <b>Plik/Zapisz wszystkie</b>.</li>
+            <li>Efekt Twojej pracy nie jest automatycznie wyświetlany w oknie po prawej stronie (bo tak jest w docelowej pracy programisty). Aby odświeżyć, najpierw zapisz pliki, a potem klikasz ikonę lub skrót <b>Ctrl+R</b> lub menu Edycja/odśwież podgląd.</li>
+            <li>Gdy zechcesz pochwalić się swoim projektem z innymi kliknij w menu <b>Publikacja/Udostępnij</b>. Tam zobaczysz link do podglądu projektu/zadania bez edytora.</li>
+            <li>Jeśli chcesz ponownie zapoznać się z treścią zadania wybierz opcję w menu <b>Zadanie</b>.</li>
+            <li>Jeżeli chcesz wysłać swój projekt do sprawdzenia mentorowi, to odpowiednią opcję znajdziesz u góry po prawej stronie - przycisk <b>Wyślij do sprawdzenia</b>. Obok możesz sprawdzić status zadania.</li>
+            <li>Ustawienia podglądu zmienisz w jasno-szarym pasku u góry prawej kolumny z podglądem projektu. Poklikaj te ikony :)</li>
+        </ol>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Zamknij</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script type="text/x-translation" data-translation-name="projectSentToReview">Tw&oacute;j projekt został wysłany do sprawdzenia przez mentora!</script>
+    <script type="text/x-handlebars-template" data-template-name="createTargetCssFile">Utwórz plik <b>@{{filename}}</b> aby zapisać do niego skompilowane style.</script>
+    <script type="text/x-translation" data-translation-name="projectNotSavedBeforeSentToReview">Nie wszystkie Twoje pliki zostały zapisane!</script>
+    <script type="text/x-translation" data-translation-name="newFolder">Nowy folder</script>
+
+<div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+</div>
+
+<div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+            <div style="position: fixed; left: -100%; top: -100%;">
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 935284763;
+                var google_custom_params = window.google_tag_params;
+                var google_remarketing_only = true;
+                /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/935284763/?value=0&amp;guid=ON&amp;script=0"/>
+                </div>
+            </noscript>
+        </div>
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?afd05"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?a6c92"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?bd11f"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?63862"></script>
+<script src="https://kodilla.com/static/js/informator-modal.js?8b45d"></script>
+<script src="https://kodilla.com/static/js/fb.js?457c2"></script>
+<!-- ActiveCampaign -->
+<script>
+    var trackcmp_email = 'm.ramos@o2.pl';
+    var trackcmp = document.createElement("script");
+    trackcmp.async = true;
+    trackcmp.type = 'text/javascript';
+    trackcmp.src = '//trackcmp.net/visit?actid=649095895&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+    var trackcmp_s = document.getElementsByTagName("script");
+    if (trackcmp_s.length) {
+        trackcmp_s[0].parentNode.appendChild(trackcmp);
+    } else {
+        var trackcmp_h = document.getElementsByTagName("head");
+        trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+    }
+</script>
+        <script src="https://kodilla.com/static/js/libs/underscore-min.js?eb1ec"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?16c32"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?4390e"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?ec5fd"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?32030"></script>
+<script src="https://kodilla.com/static/js/extends/handlebars-ifCond.js?6a9fd"></script>
+<script src="https://kodilla.com/static/js/application.js?06a99"></script>
+<script src="https://kodilla.com/static/js/main.js?e3fe2"></script>
+<script src="https://kodilla.com/static/js/services/tracking-activities.js?9edf6"></script>
+<script src="https://kodilla.com/static/js/views/notifications.js?49521"></script>
+<script src="https://kodilla.com/static/js/freshchat.js?75fd8"></script>
+<script src="https://kodilla.com/static/js/views/settings.js?2cdf5"></script>
+<script src="https://kodilla.com/static/js/views/delete-account.js?24e86"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/static/js/helpers/forms.js?ef3fb"></script>
+<script src="https://kodilla.com/static/js/helpers/alerts.js?0b053"></script>
+<script src="https://kodilla.com/static/js/helpers/inpage-alerts.js?4b213"></script>
+<script src="https://kodilla.com/static/js/collections.js?58d16"></script>
+<script src="https://kodilla.com/static/js/models.js?7eec0"></script>
+<script src="https://kodilla.com/static/js/views/knowledge-base.js?44f20"></script>
+<script src="https://kodilla.com/static/js/views/menu-light.js?d61a2"></script>
+
+<script src="https://kodilla.com/static/js/libs/jquery-migrate-1.2.1.js?5d2bb"></script>
+<script src="https://kodilla.com/static/js/libs/tether.min.js?b6f75"></script>
+<script src="https://kodilla.com/static/js/libs/ace9/src-min-noconflict/ace.js?54a67"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-ui.min.js?54158"></script>
+<script src="https://kodilla.com/static/js/libs/splitter.js?c41d0"></script>
+<script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?07dfc"></script>
+<script src="https://kodilla.com/static/js/kodilla.lib.js?f283b"></script>
+<script src="https://kodilla.com/static/js/views/editor.js?d9e4d"></script>
+<script type="text/x-translation" data-translation-name="editorTabCloseMessage">Czy na pewno chcesz wyłączyć niezapisany plik?</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.0/js/bootstrap-colorpicker.min.js"></script>
+    <script src="https://kodilla.com/static/js/libs/clipboard.min.js?ecb0b"></script>
+    <script src="https://kodilla.com/static/js/views/tools.js?1ef08"></script>
+
+    <script src="https://kodilla.com/static/js/libs/bootstrap-treeview.js?4301f"></script>
+    <script src="https://kodilla.com/static/js/libs/hashmap.js?15263"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/keymaster/1.6.1/keymaster.min.js"></script>
+    <script src="https://kodilla.com/static/js/views/project.js?ab107"></script>
+    <script type="text/x-translation" data-translation-name="projectDeleteFileMessage">Czy na pewno chcesz usunąć plik</script>
+    <script type="text/x-translation" data-translation-name="projectReloadPreviewMessage">Czy zapisać wszystkie pliki projektu, w kt&oacute;rych dokonano zmian?</script>
+    <script type="text/x-translation" data-translation-name="projectTreeViewFolderDeleteFolderMessage">Czy na pewno chcesz usunąć folder?</script>
+
+
+<div id="call-us">
+    <div class="call-us-icon" id="call-us-icon" data-toggle="modal" data-target="#call-us-modal" style="display: none;">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+    </div>
+    <div id="call-us-desc" style="display: none;">
+        Um&oacute;w się na rozmowę z doradcą Kodilli
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-us/step1" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" placeholder="737690577">
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-counter" data-url="https://kodilla.com/pl/call-us/counter">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Tw&oacute;j numer telefonu nie będzie wykorzystywany w celach marketingowych lub przekazany dalej. Tylko oddzwonimy.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-us/step2" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
