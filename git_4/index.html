@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="csrf-token" content="wDxBX7uJToOdjs7fDbgctb6ZONXR0tbmCXAaTAUZ" />
+
+        <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="https://kodilla.com/static/img/icons/apple-touch-icon-60x60.png?00000">
+        <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="https://kodilla.com/static/img/icons/apple-touch-icon-76x76.png?00000">
+        <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="https://kodilla.com/static/img/icons/apple-touch-icon-120x120.png?00000">
+        <link rel="apple-touch-icon" type="image/png" sizes="152x152" href="https://kodilla.com/static/img/icons/apple-touch-icon-152x152.png?00000">
+        <link rel="icon" type="image/png" sizes="32x32" href="https://kodilla.com/static/img/icons/favicon-32x32.png?beb20">
+        <link rel="icon" type="image/png" sizes="96x96" href="https://kodilla.com/static/img/icons/favicon-96x96.png?b6f2f">
+        <link rel="icon" type="image/png" sizes="16x16" href="https://kodilla.com/static/img/icons/favicon-16x16.png?7a376">
+
+        <link rel="canonical" href="https://kodilla.com/pl/courses/rwd/1-13-78-408" />
+        <title>Tworzymy szkielet HTML oraz podstawowy CSS | Kodilla.com</title>
+        <meta name="description" content="Może się zdarzyć, że podczas pracy ktoś zleci nam przystosowanie jego strony do wyświetlania na urządzeniach mobilnych lub poprawy wyświetlania na pulpitach (zw">
+        
+        <link href="https://kodilla.com/static/css/libs/bootstrap.min.css?f13ad" rel="stylesheet">
+        <link href="https://kodilla.com/static/css/libs/font-awesome.min.css?6585d" rel="stylesheet">
+        <link href="https://kodilla.com/static/css/main.css?3448e" rel="stylesheet" type="text/css">
+                        <link rel="stylesheet" href="https://kodilla.com/static/css/libs/ui.resizable.css?1593c">
+        <link rel="stylesheet" href="https://kodilla.com/static/css/libs/perfect-scrollbar.css?cdfda" />
+        <link rel="stylesheet" href="https://kodilla.com/static/css/editor.css?33fd3">
+        <link href="https://kodilla.com/static/css/tools.css?8186e" rel="stylesheet" type="text/css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.0/css/bootstrap-colorpicker.min.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://kodilla.com/static/css/exercise.css?00000">
+
+    <link rel="stylesheet" href="https://kodilla.com/static/css/exercise.css?00000">
+        <script>
+            window.environment = 'production';
+            window.loggedIn = true;
+                        window.fbAppId = 1449248938627896;
+            window.locale = 'pl';
+            window.lang = 'pl';
+        </script>
+        <!-- Facebook Pixel Code -->
+        <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+        n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+        document,'script','https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '696781457129903', {
+            em: 'insert_email_variable,'
+        });
+        fbq('track', 'PageView');
+        </script>
+        <noscript>
+            <img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=696781457129903&ev=PageView&noscript=1"/>
+        </noscript>
+        <!-- DO NOT MODIFY -->
+        <!-- End Facebook Pixel Code -->
+
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-KN2WWBH');</script>
+        <!-- End Google Tag Manager -->
+</head>
+<body >
+<script>
+window.fbAsyncInit = function() {
+    FB.init({
+        appId: window.fbAppId,
+        xfbml: true,
+        version: 'v2.10'
+    });
+};
+(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) { return; }
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+
+    <nav class="navbar-editor navbar navbar-dark bg-inverse clearfix">
+            <a href="https://kodilla.com/pl/courses/rwd" class="btn-back">RWD</a>
+    <a href="/pl/" class="brand">Kodilla.com</a>
+    <div class="dropdown">
+        <a href="#" class="dropdown-toggle analytics-track" data-event="course_editor_topmenu_dropdown" data-toggle="dropdown">
+            <i class="fa fa-bars"></i>
+        </a>
+        <div class="dropdown-menu dropdown-menu-right">
+            <a href="https://kodilla.com/pl/courses" class="dropdown-item">Kursy</a>
+                                    <div class="dropdown-divider"></div>
+            <a href="https://kodilla.com/pl/account" class="dropdown-item">Konto</a>
+                                    <a href="https://kodilla.com/pl/sign-out" class="dropdown-item analytics-track" data-event="account_logout">Wyloguj</a>
+                    </div>
+    </div>
+    <div class="navbar-right nav navbar-nav">
+                <div class="dropdown">
+            <a href="https://kodilla.com/pl/tools" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-wrench"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-color-picker">Color picker</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-border-radius">Border-radius</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-box-shadow">Box-shadow</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-text-shadow">Text-shadow</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-transition">Transition</a>
+                <a href="#" class="dropdown-item" data-toggle="modal" data-target="#tool-flexbox">Flexbox</a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <main class="editor" id="editor-main" data-path-id="1" data-course-id="13" data-lesson-id="78" data-exercise-id="408" data-exercise-position-in-course="24"></main>
+<div id="tools" class="editor-modal">
+    <div class="modal fade" id="tool-color-picker">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-color-picker">
+    <div class="card-header">
+        <h4 class="card-title">
+            Color picker
+        </h4>
+    </div>
+    <div class="card-block">
+        <div id="color" data-container="#color" data-color="#ff0000" data-inline="true"></div>
+        <form>
+            <fieldset class="form-group">
+                <label for="color-picker">Kod CSS</label>
+                <textarea class="form-control result-code" id="color-picker-code" rows="1">#ff0000</textarea>
+            </fieldset>
+        </form>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-border-radius">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-border-radius">
+    <div class="card-header">
+        <h4 class="card-title">
+            Border radius
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="border-radius-top-left">
+                            Top Left
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-top-left" name="topLeft" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="border-radius-top-right">
+                            Top Right
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-top-right" name="topRight" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="border-radius-bottom-right">
+                            Bottom Right
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-bottom-right" name="bottomRight" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="border-radius-bottom-left">
+                            Bottom Left
+                        </label>
+                        <input type="text" class="form-control" id="border-radius-bottom-left" name="bottomLeft" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="box-shadow-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="box-shadow-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-box-shadow">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-box-shadow">
+    <div class="card-header">
+        <h4 class="card-title">
+            Box shadow
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="inset">
+                            Inset
+                        </label>
+                        <select class="form-control" id="inset" name="inset">
+                            <option value="">No</option>
+                            <option value="inset ">Inset</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="horizontal-length">
+                            Horizontal length
+                        </label>
+                        <input type="text" class="form-control" id="horizontal-length" name="horizontalLength" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="vertical-length">
+                            Vertical length
+                        </label>
+                        <input type="text" class="form-control" id="vertical-length" name="verticalLength" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="blur-radius">
+                            Blur radius
+                        </label>
+                        <input type="text" class="form-control" id="blur-radius" name="blurRadius" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="spread">
+                            Spread
+                        </label>
+                        <input type="text" class="form-control" id="spread" name="spread" placeholder="e.g. 10px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="box-shadow-color">
+                            Color
+                        </label>
+                        <input type="text" class="form-control" id="box-shadow-color" name="color" placeholder="e.g. #FF0000 or rgba(255, 0, 0, 1)"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="box-shadow-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="box-shadow-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-text-shadow">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-text-shadow">
+    <div class="card-header">
+        <h4 class="card-title">
+            Text shadow
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-horizontal-length">
+                            Horizontal length
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-horizontal-length" name="horizontalLength" placeholder="e.g. 2px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-vertical-length">
+                            Vertical length
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-vertical-length" name="verticalLength" placeholder="e.g. 2px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-blur-radius">
+                            Blur radius
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-blur-radius" name="blurRadius" placeholder="e.g. 5px"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-color">
+                            Shadow color
+                        </label>
+                        <input type="text" class="form-control" id="text-shadow-color" name="color" placeholder="e.g. #FF0000 or rgba(255, 0, 0, 1)"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="text-shadow-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="text-shadow-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo unstyled">
+                    Lorem ipsum dolor sit amet dolor. Sed in augue a nunc. Quisque sed molestie tristique sodales. Vivamus vulputate aliquam convallis. Cras ut nulla nulla, at magna ac ligula turpis, et magnis dis parturient montes, nascetur ridiculus mus. Etiam dolor. Pellentesque varius justo. Sed eu tortor. Ut id lectus. Vivamus est.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-transition">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-transition">
+    <div class="card-header">
+        <h4 class="card-title">
+            Transition
+        </h4>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="transition-property">
+                            Property
+                        </label>
+                        <select class="form-control" id="transition-property" name="property">
+                            <option>all</option>
+                            <option>background</option>
+                            <option>color</option>
+                            <option>height</option>
+                            <option>width</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-duration">
+                            Duration
+                        </label>
+                        <input type="text" class="form-control" id="transition-duration" name="duration" placeholder="e.g. 200ms or 2s"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-function">
+                            Function
+                        </label>
+                        <select class="form-control" id="transition-function" name="function">
+                            <option>ease</option>
+                            <option>linear</option>
+                            <option>ease-in</option>
+                            <option>ease-out</option>
+                            <option>ease-in-out</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="transition-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h5>Podgląd:</h5>
+                <div class="demo">
+                    Lorem ipsum dolor sit amet dolor. Sed in augue a nunc. Quisque sed molestie tristique sodales. Vivamus vulputate aliquam convallis.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="tool-flexbox">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="card tool tool-flexbox">
+    <div class="card-header">
+        <h4 class="card-title">
+            Flexbox generator
+        </h4>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-info add-element">Dodaj element</button>
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-sm-6">
+                <form>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-grow">
+                            flex-grow
+                        </label>
+                        <input type="text" class="form-control" id="flexbox-flex-grow" name="flexGrow" placeholder="e.g. 1"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-shrink">
+                            flex-shrink
+                        </label>
+                        <input type="text" class="form-control" id="flexbox-flex-shrink" name="flexShrink" placeholder="e.g. 0"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-basis">
+                            flex-basis
+                        </label>
+                        <input type="text" class="form-control" id="flexbox-flex-basis" name="flexBasis" placeholder="e.g. auto, 100px or 20%"/>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-direction">
+                            flex-direction
+                        </label>
+                        <select class="form-control" id="flexbox-flex-direction" name="flexDirection">
+                            <option>row</option>
+                            <option>row-reverse</option>
+                            <option>column</option>
+                            <option>column-reverse</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-flex-wrap">
+                            flex-wrap
+                        </label>
+                        <select class="form-control" id="flexbox-flex-wrap" name="flexWrap">
+                            <option>wrap</option>
+                            <option>wrap-reverse</option>
+                            <option>nowrap</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="flexbox-justify-content">
+                            justify-content
+                        </label>
+                        <select class="form-control" id="flexbox-justify-content" name="justifyContent">
+                            <option>flex-start</option>
+                            <option>flex-end</option>
+                            <option>center</option>
+                            <option>space-between</option>
+                            <option>space-around</option>
+                        </select>
+                        <small class="text-muted">Aby zobaczyć zmianę ustaw trzy pierwsze wartości np. na 0 1 auto</small>
+                    </fieldset>
+                    <fieldset class="form-group">
+                        <label for="transition-code">Kod CSS</label>
+                        <textarea class="form-control result-code" id="transition-code" rows="1"></textarea>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="col-sm-6">
+                <h4>Podgląd:</h4>
+                <div class="flex-container demo"></div>
+            </div>
+        </div>
+    </div>
+    <div class="card-block">
+        <button class="btn btn-primary copy-code" disabled data-clipboard-text="" title="Skopiowano kod" data-content="Użyj go w swoim kodzie (Ctrl+V)">
+            Skopiuj kod
+        </button>
+    </div>
+</div>            </div>
+        </div>
+    </div>
+</div>
+<script type="text/x-handlebars-template" data-template-name="boxShadowCode">
+-webkit-box-shadow: {{inset}}{{horizontalLength}} {{verticalLength}} {{blurRadius}} {{spreadLength}} {{color}};
+box-shadow: {{inset}}{{horizontalLength}} {{verticalLength}} {{blurRadius}} {{spread}} {{color}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="boxShadowStyle">
+.card.tool-box-shadow .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="textShadowCode">
+text-shadow: {{horizontalLength}} {{verticalLength}} {{blurRadius}} {{color}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="textShadowStyle">
+.card.tool-text-shadow .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="flexboxCode">
+.flex-container {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: {{flexDirection}} {{flexWrap}};
+    flex-flow: {{flexDirection}} {{flexWrap}};
+    -webkit-justify-content: {{justifyContent}};
+    justify-content: {{justifyContent}};
+}
+.flex-item {
+    -webkit-flex: {{flexGrow}} {{flexShrink}} {{flexBasis}};
+    flex: {{flexGrow}} {{flexShrink}} {{flexBasis}};
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="flexboxStyle">{{code}}</script>
+<script type="text/x-handlebars-template" data-template-name="borderRadiusCode">
+-webkit-border-radius: {{topLeft}} {{topRight}} {{bottomRight}} {{bottomLeft}};
+border-radius: {{topLeft}} {{topRight}} {{bottomRight}} {{bottomLeft}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="borderRadiusStyle">
+.card.tool-border-radius .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="transitionCode">
+-webkit-transition: {{property}} {{duration}} {{function}};
+-moz-transition: {{property}} {{duration}} {{function}};
+-ms-transition: {{property}} {{duration}} {{function}};
+-o-transition: {{property}} {{duration}} {{function}};
+transition: {{property}} {{duration}} {{function}};
+</script>
+<script type="text/x-handlebars-template" data-template-name="transitionStyle">
+.card.tool-transition .demo {
+    {{code}}
+}
+</script>
+<script type="text/x-handlebars-template" data-template-name="colorPickerCode">
+{{color}}
+</script>
+<script type="text/x-handlebars-template" data-template-name="flexItem">
+<div class="flex-item"><span contenteditable="true">{{text}}</span></div>
+</script><script type="text/x-handlebars-template" data-template-name="previewTitle">
+    {{#if title }}
+    <b>{{label}}:</b> {{title}}
+    {{else}}
+    <b>{{label}}</b>
+    {{/if}}
+</script>
+<script type="text/x-handlebars-template" data-template-name="editor">
+        <aside id="lesson-nav" class="courses-sidenav">
+        <div class="csb-container">
+                            <h3 class="lesson-title" data-active="">
+                    1.   Wprowadzenie
+                </h3>
+                <ul>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-60-324 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Idea RWD</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-60-325 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Viewport</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-60-326 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Media queries</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-60-327 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Break point - czyli jak złamać, żeby nie zepsuć</a></li>
+                                    </ul>
+                            <h3 class="lesson-title" data-active="">
+                    2.   Układ jednokolumnowy i elastyczne jednostki
+                </h3>
+                <ul>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-62-323 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Podejście relatywne i sztywne</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-62-363 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Jednostki viewport</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-62-364 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Układ jednokolumnowy</a></li>
+                                    </ul>
+                            <h3 class="lesson-title" data-active="">
+                    3.   Układy wielokolumnowe
+                </h3>
+                <ul>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-63-365 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Układ dwukolumnowy</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-63-366 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Pierwszy pr&oacute;g</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-63-367 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Kolejne break pointy</a></li>
+                                    </ul>
+                            <h3 class="lesson-title" data-active="">
+                    4.   Wiele element&oacute;w - jeden grid
+                </h3>
+                <ul>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-71-371 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Podstawy responsywnego gridu</a></li>
+                                                                    <li class=" "><a href=https://kodilla.com/pl/courses/rwd/1-13-71-372 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Łamanie gridu czas zacząć</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-71-374 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Liczy się każdy szczeg&oacute;ł</a></li>
+                                    </ul>
+                            <h3 class="lesson-title" data-active="">
+                    5.   Elementy responsywne
+                </h3>
+                <ul>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-64-368 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Menu liniowo-blokowe</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-64-369 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Responsywne breadcrumbs</a></li>
+                                                                    <li class=" "><a href=https://kodilla.com/pl/courses/rwd/1-13-64-544 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Tabela</a></li>
+                                    </ul>
+                            <h3 class="lesson-title" data-active="">
+                    6.   Media queries
+                </h3>
+                <ul>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-87-414 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Reguła screen i speech</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-87-416 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Reguła print</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-87-415 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Height oraz width a device-height i device-width</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-87-417 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Orientation</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-87-418 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Wiele wymagań - jedna złożona reguła</a></li>
+                                                                    <li class="done "><a href=https://kodilla.com/pl/courses/rwd/1-13-87-419 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Wiele zastosowań - jedna reguła</a></li>
+                                                                    <li class=" "><a href=https://kodilla.com/pl/courses/rwd/1-13-87-420 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Łączenie reguł media</a></li>
+                                    </ul>
+                            <h3 class="lesson-title" data-active="">
+                    7.   Tworzymy responsywną stronę!
+                </h3>
+                <ul>
+                                                                                                                        <li class="done active"><a href=https://kodilla.com/pl/courses/rwd/1-13-78-408 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Tworzymy szkielet HTML oraz podstawowy CSS</a></li>
+                                                                    <li class=" "><a href=https://kodilla.com/pl/courses/rwd/1-13-78-409 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Tworzymy regułę media</a></li>
+                                                                    <li class=" "><a href=https://kodilla.com/pl/courses/rwd/1-13-78-411 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Uzupełniamy style og&oacute;lne i regułę media</a></li>
+                                                                    <li class=" "><a href=https://kodilla.com/pl/courses/rwd/1-13-78-421 class="analytics-track" data-event="course_editor_edu_content-list_chosen">Reguła min-width</a></li>
+                                    </ul>
+                    </div>
+    </aside>
+    <section class="description hidden-md-down">
+        <header class="aside-toggle course">
+            <h2>Tworzymy responsywną stronę!</h2>
+            <span class="badg">1/4</span>
+            <i class="fa fa-bars fa-lg"></i>
+            <div class="done-ribbon">&nbsp;</div>
+            <i class="fa fa-check-circle"></i>
+        </header>
+        <article class="csb-container">
+            <h1>7.1. {{ name }}</h1>
+            <div class="introduction">{{{ introduction }}}</div>
+            <div class="tasks">
+                <span class="tasks-head">
+                    <strong>Zadania</strong>
+                </span>
+                <ol><li>W <c>nav</c> ponad <c>ul</c> zagnieźdź elementy: <c>input type="checkbox"</c> o id <c>menu-button</c> oraz label dla tego elementu i w miejscu tekstu umieść znak <c>☰</c> (przekopiuj go z tego tekstu).</li><li>Przejdź do pliku <em>style.css</em>.</li><li>Utwórz selektor z kombinatorem <c>input[type="checkbox"] + label</c>  i nadaj mu właściwości: <c>font-size: 25px</c> oraz <c>cursor: pointer</c>.</li><li>Na tym etapie nie będziemy potrzebować elementów <c>input</c> i <c>label</c>, więc ukryjmy je przy pomocy nowego selektora grupowego dla  obu elementów oraz właściwości  <c>display: none</c></li></ol>
+                {{#if hint }}
+                <div class="tasks-tip">
+                    <a href="#" class="show-tip" title="Kliknij żeby zobaczyć"><i class="fa fa-life-ring"></i> Podpowiedź</a>
+                </div>
+                <div class="tip display-none">
+                    {{{ hint }}}
+                </div>
+                {{/if}}
+            </div>
+        </article>
+    </section>
+    <section class="splitter-container hidden-md-down">
+        {{#unless presentation_url }}
+        <div class="splitter vertical">
+            <div class="ide">
+                <div class="plug">
+                    <div>
+                        <i class="fa fa-file-code-o"></i>
+                        <p>Otw&oacute;rz istniejący plik lub stw&oacute;rz nowy aby rozpocząć edycję</p>
+                    </div>
+                </div>
+                <div class="tabs-container">
+                    <i data-action="show-preview" class="fa fa-eye fa-lg show-preview-btn display-none" title="Pokaż podgląd"></i>
+                    <div class="tabs"></div>
+                    <div class="arrows">
+                        <i class="fa fa-angle-left slide-left"></i>
+                        <i class="fa fa-angle-right slide-right"></i>
+                    </div>
+                </div>
+                <div id="editor"></div>
+            </div>
+            <div id="preview">
+                <header class="clearfix">
+                                        <h2 data-label="Podgląd"></h2>
+                    <nav class="clearfix">
+                        <i data-action="layout-change" class="fa fa-th-large fa-lg" title="Układ pionowy/poziomy"></i>
+                        <i data-action="expand-preview" class="fa fa-share-square-o fa-lg" title="Ustaw podgląd jako osobne okno"></i>
+                        <i data-action="compress-preview" class="fa fa-share-square-o fa-lg display-none" title="Ustaw podgląd jako element układu"></i>
+                        <i data-action="hide-preview" class="fa fa-eye fa-lg" title="Schowaj podgląd"></i>
+                        <i data-action="full-preview" class="fa fa-arrows-alt fa-lg" title="Maksymalizuj"></i>
+                        <i data-action="compact-preview" class="fa fa-arrows-alt fa-lg display-none" title="Minimalizuj"></i>
+                    </nav>
+                    <div class="select-wrapper">
+                        <select data-action="change-preview-file" id="preview-select"></select>
+                    </div>
+                </header>
+                <div id="window">
+                    <iframe src="about:blank"></iframe>
+                    <div id="validation-iframes"></div>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <iframe id="presentation-iframe" src="{{ presentation_url }}" frameborder="0" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        {{/unless}}
+            <nav>
+            {{#unless presentation_url }}
+        <a id="validate-code-btn" class="btn btn-primary"><span>Zapisz i sprawdź</span><i class="fa fa-circle-o-notch fa-spin"></i></a>
+        <a id="reset-code-btn" class="btn btn-default" data-confirm-text="Na pewno chcesz zresetować sw&oacute;j kod?">Resetuj</a>
+        {{else}}
+        <a id="validate-code-btn" class="btn btn-primary">Przejdź dalej</a>
+        {{/unless}}
+                                        <a class="btn btn-warning " href="https://kodilla.com/pl/courses/rwd/1-13-78-409">Następne ćwiczenie</a>
+                                </nav>
+    </section>
+    <div class="alert alert-info editor-plug resolution" role="alert">
+        Edytor nie działa na urządzeniach o rozdzielczości poprzecznej niższej niż 992 piksele.
+    </div>
+    <div class="alert alert-info editor-plug browser" role="alert">
+        <p>Twoja przeglądarka jest przestarzała. Lista najniższych obsługiwanych przez nas wersji:</p>
+        <ul>
+            <li>Chrome 30</li>
+            <li>Firefox 30</li>
+            <li>Opera 10</li>
+            <li>Safari 7</li>
+            <li>Internet Explorer 11</li>
+        </ul>
+    </div>
+</script>
+<script type="text/x-handlebars-template" data-template-name="editorTab">
+    {{filename}}
+</script>
+
+        <div class="modal fade" id="val-result">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                                <h2>Kod jest poprawny!</h2>
+                                <p>Pierwszy krok za nami!</p>
+                                                        <a class="btn btn-primary" href="https://kodilla.com/pl/courses/rwd/1-13-78-409">Następne ćwiczenie</a>
+                                                </div>
+        </div>
+    </div>
+        <div class="modal fade" id="val-result-error">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content error">
+                <h2>Błąd we wprowadzonym kodzie!</h2>
+                <p>W kodzie wystąpiły następujące błędy:</p>
+                <ul></ul>
+                <span>Zalecamy używanie najnowszej wersji Google Chrome.</span>
+                <a href="#" class="btn btn-danger" data-dismiss="modal">Zamknij</a>
+            </div>
+        </div>
+    </div>
+        <script type="text/x-handlebars-template" data-template-name="errorMessage">
+    <b>{{filename}}</b>: {{{message}}}
+</script>
+<script type="text/x-handlebars-template" data-template-name="validationCode">
+    {{{code}}}
+    <script type="text/javascript" src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?afd05"><{{!}}/script>
+    <script type="text/javascript" src="https://kodilla.com/static/js/libs/jquery-migrate-1.2.1.js?5d2bb"><{{!}}/script>
+    <script type="text/javascript" src="https://kodilla.com/static/js/kodilla.lib.js?f283b"><{{!}}/script>
+    <script type="text/javascript">
+    (function() {
+
+        var messages = {};
+        var queue = $.when();
+
+        window.queue = function(cb) {
+            if(cb) {
+                queue = queue.then(cb);
+            }
+            return queue;
+        };
+
+        window.changeWidth = function(width, callback) {
+            if(width < 1) {
+                return $.when();
+            }
+            var promise = $.Deferred();
+            top.window.postMessage(JSON.stringify({
+                action: 'changeWidth',
+                width: width
+            }), '*');
+            $(window).one('message', function() {
+                callback();
+                promise.resolve();
+            });
+            return promise;
+        };
+
+        $(window).one('message', function(e) {
+            var data = JSON.parse(e.originalEvent.data);
+            setTimeout(function() {
+                $.each(data.validators, function(key, validator) {
+                    var message = messages[validator.filename] = [];
+                    var $code = {
+                        html: new window.$code.html(),
+                        css: new window.$code.css(),
+                        mediaQueries: function(sizes, rules) {
+                            window.$code.mediaQueries(sizes, rules, message);
+                        }
+                    };
+                    $code.html.setCode($(document), validator.resolution || validator.userContent);
+                    $code.css.setCode($(document), validator.resolution || validator.userContent);
+                    eval(validator.verification);
+                });
+                queue.then(function() {
+                    top.window.postMessage(JSON.stringify({
+                        action: 'validationFinished',
+                        filename: data.filename,
+                        messages: messages
+                    }), '*');
+                });
+            }, 100);
+        });
+
+        $(function() {
+            top.window.postMessage(JSON.stringify({
+                action: 'iframeReady'
+            }), '*');
+        });
+
+    })();
+    <{{!}}/script>
+</script>    <script type="text/x-handlebars-template" data-template-name="validationErrorModalDesc">
+        {{#if filename }}
+        W kodzie wystąpiły następujące błędy:
+        {{else}}
+        W kodzie wystąpiły następujące błędy:
+        {{/if}}
+    </script>
+    <script type="text/x-translation" data-translation-name="paymentRequired">Musisz wykupić bootcamp aby wejść do tej części kursu.</script>
+    <script type="text/x-translation" data-translation-name="loginRequired">Musisz być zalogowany aby wejść do tej części kursu.</script>
+
+<div id="alerts">
+    <div class="alert alert-danger" role="alert">
+        <i class="fa fa-exclamation" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-success" role="alert">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-warning" role="alert">
+        <i class="fa fa-warning" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                </ul>
+    </div>
+    <div class="alert alert-info" role="alert">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <button type="button" class="close" data-hide="alert" aria-label="Zamknij">
+            <span aria-hidden="true">&times;</span>
+            <span class="sr-only">Zamknij</span>
+        </button>
+        <ul>
+                        </ul>
+    </div>
+</div>
+
+<div data-role="notifications-wrapper" class="notifications-wrapper"></div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KN2WWBH" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+            <div style="position: fixed; left: -100%; top: -100%;">
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 935284763;
+                var google_custom_params = window.google_tag_params;
+                var google_remarketing_only = true;
+                /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js"></script>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/935284763/?value=0&amp;guid=ON&amp;script=0"/>
+                </div>
+            </noscript>
+        </div>
+    <script src="https://kodilla.com/static/js/libs/jquery-2.1.4.min.js?afd05"></script>
+<script src="https://kodilla.com/static/js/libs/js.cookie-2.1.0.min.js?a6c92"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-dateFormat.min.js?bd11f"></script>
+<script src="https://kodilla.com/static/js/libs/bootstrap.min.js?63862"></script>
+<script src="https://kodilla.com/static/js/informator-modal.js?8b45d"></script>
+<script src="https://kodilla.com/static/js/fb.js?457c2"></script>
+<!-- ActiveCampaign -->
+<script>
+    var trackcmp_email = 'm.ramos@o2.pl';
+    var trackcmp = document.createElement("script");
+    trackcmp.async = true;
+    trackcmp.type = 'text/javascript';
+    trackcmp.src = '//trackcmp.net/visit?actid=649095895&e='+encodeURIComponent(trackcmp_email)+'&r='+encodeURIComponent(document.referrer)+'&u='+encodeURIComponent(window.location.href);
+    var trackcmp_s = document.getElementsByTagName("script");
+    if (trackcmp_s.length) {
+        trackcmp_s[0].parentNode.appendChild(trackcmp);
+    } else {
+        var trackcmp_h = document.getElementsByTagName("head");
+        trackcmp_h.length && trackcmp_h[0].appendChild(trackcmp);
+    }
+</script>
+            <script src="https://kodilla.com/static/js/libs/underscore-min.js?eb1ec"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-min.js?16c32"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-relational.min.js?4390e"></script>
+<script src="https://kodilla.com/static/js/libs/backbone-super.min.js?ec5fd"></script>
+<script src="https://kodilla.com/static/js/libs/handlebars-v4.0.5.min.js?32030"></script>
+<script src="https://kodilla.com/static/js/extends/handlebars-ifCond.js?6a9fd"></script>
+<script src="https://kodilla.com/static/js/application.js?06a99"></script>
+<script src="https://kodilla.com/static/js/main.js?e3fe2"></script>
+<script src="https://kodilla.com/static/js/services/tracking-activities.js?9edf6"></script>
+<script src="https://kodilla.com/static/js/views/notifications.js?49521"></script>
+<script src="https://kodilla.com/static/js/freshchat.js?75fd8"></script>
+<script src="https://kodilla.com/static/js/views/settings.js?2cdf5"></script>
+<script src="https://kodilla.com/static/js/views/delete-account.js?24e86"></script>
+<script type="text/x-translation" data-translation-name="checkAccountDeleteCalculationMessage">Wynik jest nieprawidłowy</script>
+<script src="https://kodilla.com/static/js/helpers/forms.js?ef3fb"></script>
+<script src="https://kodilla.com/static/js/helpers/alerts.js?0b053"></script>
+<script src="https://kodilla.com/static/js/helpers/inpage-alerts.js?4b213"></script>
+<script src="https://kodilla.com/static/js/collections.js?58d16"></script>
+<script src="https://kodilla.com/static/js/models.js?7eec0"></script>
+<script src="https://kodilla.com/static/js/views/knowledge-base.js?44f20"></script>
+<script src="https://kodilla.com/static/js/views/menu-light.js?d61a2"></script>
+
+<script src="https://kodilla.com/static/js/libs/jquery-migrate-1.2.1.js?5d2bb"></script>
+<script src="https://kodilla.com/static/js/libs/tether.min.js?b6f75"></script>
+<script src="https://kodilla.com/static/js/libs/ace9/src-min-noconflict/ace.js?54a67"></script>
+<script src="https://kodilla.com/static/js/libs/jquery-ui.min.js?54158"></script>
+<script src="https://kodilla.com/static/js/libs/splitter.js?c41d0"></script>
+<script src="https://kodilla.com/static/js/libs/perfect-scrollbar.jquery.min.js?07dfc"></script>
+<script src="https://kodilla.com/static/js/kodilla.lib.js?f283b"></script>
+<script src="https://kodilla.com/static/js/views/editor.js?d9e4d"></script>
+<script type="text/x-translation" data-translation-name="editorTabCloseMessage">Czy na pewno chcesz wyłączyć niezapisany plik?</script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-colorpicker/2.3.0/js/bootstrap-colorpicker.min.js"></script>
+    <script src="https://kodilla.com/static/js/libs/clipboard.min.js?ecb0b"></script>
+    <script src="https://kodilla.com/static/js/views/tools.js?1ef08"></script>
+
+    <script>
+        var currentExerciseIsDone = true;
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            analytics.track(localStorage.getItem('user_id') ? 'course_user_visit' : 'course_visit', {
+                course_id: 13,
+                exercise_id: 408,
+                exercise_position_in_course: 24
+            });
+        });
+    </script>
+
+
+<div id="call-us">
+    <div class="call-us-icon" id="call-us-icon" data-toggle="modal" data-target="#call-us-modal" style="display: none;">
+        <i class="fa fa-phone" aria-hidden="true"></i>
+    </div>
+    <div id="call-us-desc" style="display: none;">
+        Um&oacute;w się na rozmowę z doradcą Kodilli
+    </div>
+</div>
+<div class="modal fade" tabindex="-1" role="dialog" id="call-us-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content call-modal">
+            <div id="call-us-step1">
+                <h2>Um&oacute;w się na rozmowę z doradcą Kodilli</h2>
+                <p>Krok <span>1/2:</span> Podaj numer telefonu</p>
+                <form action="https://kodilla.com/pl/call-us/step1" method="post" id="call-us-form1">
+                    <input type="tel" name="phone" id="call-us-input-phone" placeholder="737690577">
+                    <button class="btn btn-success" id="call-us-submit-phone">Zarezerwuj rozmowę</button>
+                </form>
+                <p id="call-us-counter-holder" style="display: none;">Dzisiaj już  <span id="call-counter" data-url="https://kodilla.com/pl/call-us/counter">-</span> <span id="call-us-counter-text" data-one=" osoba zam&oacute;wiła rozmowę z nami." data-few=" osoby zam&oacute;wiły rozmowę z nami." data-more=" os&oacute;b zam&oacute;wiło rozmowę z nami."></span></p>
+                <div class="data-protection">
+                    <p>Tw&oacute;j numer telefonu nie będzie wykorzystywany w celach marketingowych lub przekazany dalej. Tylko oddzwonimy.</p>
+                </div>
+            </div>
+
+            <div id="call-us-step2" style="display: none;">
+                <h2>Wybierz dogodny termin i godzinę na rozmowę z doradcą</h2>
+                <p>Krok <span>2/2:</span>
+                <form action="https://kodilla.com/pl/call-us/step2" method="post" id="call-us-form2">
+                    <div class="select-date">
+                        <select name="date" id="call-us-input-date">
+                        </select>
+                        <select name="time" id="call-us-input-time">
+                        </select>
+                    </div>
+                    <button class="btn btn-success" id="call-us-submit-call">Oddzwońcie do mnie!</button>
+                </form>
+            </div>
+
+            <div id="call-us-step3" style="display: none;">
+                <div  class="thanks">
+                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    <h2>Dziękujemy za zamowienie rozmowy! Do usłyszenia w wybranym terminie!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
