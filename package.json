@@ -1,0 +1,25 @@
+{
+  "name": "zadanie-1-4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer-cli": "^1.0.0",
+    "browser-sync": "^2.23.3",
+    "nu-html-checker": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/goshar81/learning_git.git"
+  },
+  "bugs": {
+    "url": "https://github.com/goshar81/learning_git/issues"
+  },
+  "homepage": "https://github.com/goshar81/learning_git#readme",
+  "description": ""
+}
